@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欧标检测 - 专业纺织品检验检测服务</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ddd;
+        }
+        
+        /* 横幅区 */
+        .banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .banner-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .banner-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #0056b3;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #003d7a;
+        }
+        
+        /* 主要内容 */
+        .services {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 28px;
+            color: #0056b3;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* 关于我们 */
+        .about {
+            background-color: #f0f4f8;
+            padding: 60px 0;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        /* 客户评价 */
+        .testimonials {
+            padding: 60px 0;
+            background-color: #0056b3;
+            color: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 5px;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .client-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        /* 联系表单 */
+        .contact {
+            padding: 60px 0;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">欧标检测</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#services">服务项目</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#testimonials">客户评价</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- 横幅区 -->
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h1>专业的纺织品检验检测服务0571-82327572</h1>
+            <p>欧标检测为您提供全面、权威、高效的纺织品检测解决方案www.european-norm.com</p>
+            <a href="#contact" class="btn">免费咨询</a>
+        </div>
+    </section>
+    
+    <!-- 服务项目 -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>我们的服务</h2>
+                <p>提供全方位的纺织品检测认证服务</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>物理性能检测</h3>
+                    <p>包括拉伸强力、撕破强力、耐磨性、起毛起球等物理性能的测试分析</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>色牢度检测</h3>
+                    <p>耐洗色牢度、耐摩擦色牢度、耐光色牢度、耐汗渍色牢度等测试</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">☠️</div>
+                    <h3>有害物质检测</h3>
+                    <p>甲醛含量、偶氮染料、重金属含量、PH值、邻苯二甲酸盐等有害物质检测</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👶</div>
+                    <h3>儿童产品安全检测</h3>
+                    <p>婴幼儿纺织品特别要求的各项安全指标检测</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌍</div>
+                    <h3>国际标准认证</h3>
+                    <p>OEKO-TEX® STANDARD 100、REACH、CPSC等国际认证服务</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>阻燃性能测试</h3>
+                    <p>纺织品阻燃性能测试，符合各国标准要求</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 关于我们 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>关于欧标检测</h2>
+                    <p>欧标检测成立于2005年，是专业从事纺织品检验检测的第三方机构，拥有CNAS、CMA等多项资质认证。</p>
+                    <p>我们拥有先进的检测设备和专业的技术团队，能够为纺织品生产企业、贸易商、品牌商提供全面的检测服务和技术支持。</p>
+                    <p>多年来，我们已服务超过5000家客户，检测报告获得全球100多个国家和地区的认可。</p>
+                    <p>我们的使命是为客户提供准确、高效、公正的检测服务，助力中国纺织品走向世界。</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x350" alt="欧标检测实验室">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 客户评价 -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>客户评价</h2>
+                <p>听听我们的客户怎么说</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"欧标检测为我们公司提供了专业的纺织品检测服务，检测报告全面细致，帮助我们顺利通过了欧洲客户的验收。"</p>
+                    <div class="client-info">
+                        <img src="https://via.placeholder.com/50" alt="客户头像">
+                        <div>
+                            <h4>张先生</h4>
+                            <p>XX纺织制品有限公司</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"与欧标检测合作多年，他们的服务专业高效，特别是在有害物质检测方面为我们规避了多次风险，非常值得信赖。"</p>
+                    <div class="client-info">
+                        <img src="https://via.placeholder.com/50" alt="客户头像">
+                        <div>
+                            <h4>李女士</h4>
+                            <p>XX婴幼儿用品品牌</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 联系我们 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>联系我们</h2>
+                <p>随时为您提供专业咨询</p>
+            </div>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">公司</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">电话</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">咨询内容</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">提交咨询</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>关于我们</h3>
+                    <ul>
+                        <li><a href="#about">公司简介</a></li>
+                        <li><a href="#">资质证书</a></li>
+                        <li><a href="#">实验室设备</a></li>
+                        <li><a href="#">服务网络</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>服务项目</h3>
+                    <ul>
+                        <li><a href="#services">物理性能检测</a></li>
+                        <li><a href="#">色牢度检测</a></li>
+                        <li><a href="#">有害物质检测</a></li>
+                        <li><a href="#">国际认证</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>联系方式</h3>
+                    <ul>
+                        <li>地址：浙江省杭州市萧山区衙前镇明华村浙江纺织采购博览城43幢4楼1号</li>
+                        <li>电话：0571-82327572    82327571  </li>
+                        <li>邮箱：info@european-norm.com</li>
+                        <li>网址：www.european-norm.com</li>
+                        <li>工作时间：周一至周六 9:00-18:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 欧标检测 版权所有 | 备案号：XXXXXX</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
